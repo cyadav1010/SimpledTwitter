@@ -22,16 +22,10 @@ public class User {
 
     private String userName;
 
-//    @OneToMany
-    @OneToMany(targetEntity = Post.class,cascade = CascadeType.ALL)
+    //@OneToMany(targetEntity = Post.class,cascade = CascadeType.ALL)
+     @OneToMany
     private List<Post> posts;
 
     @ElementCollection
     private List<String> follower=new ArrayList<>();
-
-//    @ElementCollection
-//    private List<Integer> postLikes=new ArrayList<>();
-
-//    @ManyToMany
-//    List<User> userList = new ArrayList<>();
 }

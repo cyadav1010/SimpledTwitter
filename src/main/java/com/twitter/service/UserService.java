@@ -23,7 +23,7 @@ public class UserService {
     public void createUser(User user) {
         List<Post> posts = user.getPosts();
         posts.forEach(post -> {
-            // postDao.save(post);
+             postDao.save(post);
         });
         userDao.save(user);
         System.out.println("user Details save");
