@@ -1,52 +1,43 @@
-# SimpledTwitter
 
 Design a simplified Twitter clone
 
-1)
-GET call
--  /user
- Response : return all users 
+1. List of Users
+Request :GET http:localhost:8080/user
+Response : return all users
+
+2. User register
+Request : POST http:localhost:8080/user , Body : User object
+Response : N/A
+
+
+3. get User Post
+Request :GET http:localhost:8080/user/{userId}/post
+Response : return all user of user
  
- 2)
- POST call
- -/user
-  Body : send user info 
-  
-  3)/user/{userid}
-  GET call:
-  Response : user Info
-  Api info : get user Info of particular user
-  
-  4) 
-  POST call 
-  /user/{userid}/post
-   
-  Api info : send UserPost
-  
-  5)
-  GET call :
-  user/{userId}/post/{id}
-  Response : getUserPostId details 
-  
-  6)
-  GET call :
-  user/{userId}/post/{id}/like
-  api info :like a particular post 
-  
-  7)
-  GET call :
-  
-  user/{userId}/follower
-  api info : Get list of follower of user 
-  
-  8)
-  POST call :
-  user/{userId}/follower
-  
-  api info : add follow of particular user 
-  
-  9)
-  GET call :
-  user/{userId}/feed
-  
-  api info :get feed of a user 
+
+4. User Post message
+Request : POST http:localhost:8080/user/{userId}/post , Body : post object
+Response : N/A
+
+5. get particular Post of user
+Request :GET http:localhost:8080/user/{userId}/post/{id}
+Response : return post message
+
+
+6: Like the particular post 
+Request :GET http:localhost:8080/user/{userId}/post/{id}/like
+Response : return post message
+
+7: get user follower
+Request :GET http:localhost:8080/user/{userId}/follower
+Response : return list of follower
+
+8:
+Request :POST http:localhost:8080/user/{userId}/follower Body :follower object
+Response : return list of follower
+
+9: get user feed
+Request :POST http:localhost:8080/user/{userId}/feed Body :
+Response : return list of feed
+
+
